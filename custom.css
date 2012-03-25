@@ -1,0 +1,14 @@
+/* Import Original Bootstrap CSS */
+
+@import url(assets/css/bootstrap.css);
+
+
+.hero-unit > h1 {
+	text-align: center;
+}
+
+.hero-unit > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
