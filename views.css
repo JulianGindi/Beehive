@@ -1,0 +1,11 @@
+/* Import Custom Bootstrap CSS */
+
+@import url(custom.css);
+
+.input {
+	display: block;
+	margin-top: 2em;
+	margin-right: auto;
+	margin-left: auto;
+	width: 10em;
+}
