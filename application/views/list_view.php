@@ -8,9 +8,9 @@
 	<?php if(isset($bookmarks)) : foreach($bookmarks as $row) :?>
 
 	<li>
-		<h4><?php echo $row->Name; ?> </h4>
-		<div><?php echo $row->URL; ?> </div>
-		<div><?php echo $row->Comments; ?></div>
+		<div><strong>Name:</strong> <?php echo $row->Name; ?> </div>
+		<div><strong>URL:</strong> <?php echo $row->URL; ?> </div>
+		<div><strong>Comments:</strong> <?php echo $row->Comments; ?></div>
 			<h4 class="btn-small"><?php echo anchor("site/delete/$row->id", "Delete"); ?></h4>
 		<?php endforeach; ?>
 	</li>

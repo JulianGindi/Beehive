@@ -15,8 +15,10 @@
 	</p>
 
 	<p>
+		<div class="controls">
 		<label for="Comments">Comments:</label>
-		<input type="text" name="Comments" id="Comments" />
+		<textarea class="input-xlarge" id="textarea" rows="3" type="text" name="Comments"></textarea>
+	</div>
 	</p>
 
 	<p>
