@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-
-
-<html>
-<head>
-	<title>Bookmarks</title>  
-	<link href="../views.css" rel="stylesheet">
-	<style type="text/css" media="screen">
-	label {display: block;}
-	</style>
-</head>
 <body>
 
 	<div class="input">

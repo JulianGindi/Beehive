@@ -11,6 +11,7 @@ class Site extends CI_Controller
 			$data['bookmarks'] = $query;
 		}
 
+		$this->load->view('templates/header', $data);
 		$this->load->view('options_view', $data);
 	}
 
@@ -23,13 +24,14 @@ class Site extends CI_Controller
 		);
 
 		$this->bookmark_model->add_bookmark($data);
+		$this->load->view('templates/header', $data);
 		$this->load->view('options_view');
 	}
 
 	function delete()
 	{
 		$this->bookmark_model->delete_bookmark();
-		$this->load->view('list_view');
+		$this->view();
 	}
 
 	function view()
@@ -41,6 +43,7 @@ class Site extends CI_Controller
 			$data['bookmarks'] = $query;
 		}
 
+		$this->load->view('templates/header', $data);
 		$this->load->view('list_view', $data);
 	}
 } 
