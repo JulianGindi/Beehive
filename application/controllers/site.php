@@ -57,4 +57,9 @@ class Site extends CI_Controller
 		$this->load->view('templates/header', $data);
 		$this->load->view('list_view', $data);
 	}
+	
+	function view_add() {
+		$this->load->view('templates/header');
+		$this->load->view('options_view');
+	}
 } 
