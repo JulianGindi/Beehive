@@ -81,7 +81,7 @@
 
   <?php endif; ?>
 
-  <h4 class='btn'><?php echo anchor("site/index", "Enter a new Favorite"); ?></h4>
+  <h4 class='btn'><?php echo anchor("site/create", "Enter a new Favorite"); ?></h4>
 </div>  
 
       <hr>
