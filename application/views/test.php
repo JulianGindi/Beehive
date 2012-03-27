@@ -54,34 +54,41 @@
 
     <div class="container">
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h1>What Do You Love?</h1>
-        
-        <p>Have you ever watched a YouTube video 10 times? Do you find yourself constantly referencing that one article on the web? BeeHive allows you to store and share these things with your friends. Check out what we have going on here - We think you will love it.</p>
-        <img src="assets/img/beehive.png">
-        <!--<p><a class="btn btn-primary btn-large">Sign Up</a></p>-->
-        
-      </div>
+      <body>
 
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="span4">
-          <h2>Philosophy</h2>
-           <p>Inspired by Robin Sloan's <a href="http://www.robinsloan.com/fish/">iPhone essay</a> on distinguishing things on the Internet that you love, BeeHive allows you to store those things and share them with your friends. </p>
-          <p><a class="btn" href="#">More &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Simplicity</h2>
-           <p>BeeHive is built and designed with simplicity in mind which allows you to focus on the things you love. BeeHive is fast and beautiful, creating an ideal environment for you to enjoy and share your favorite online content.</p>
-          <p><a class="btn" href="#">More &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Social</h2>
-          <p>BeeHive allows you to choose the amount of privacy you want. You can choose to keep your favorites to yourself or share them with your friends. BeeHive helps you find new content when your friends share what they love.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
+  <div class="input">
+  <h3>Add Favorite:</h3>
+  <?php echo form_open('site/create'); ?>
+
+  <p>
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" id="Name" />
+  </p>
+
+  <p>
+    <label for="URL">URL:</label>
+    <input type="text" name="URL" id="URL" />
+  </p>
+
+  <p>
+    <div class="controls">
+    <label for="Comments">Comments:</label>
+    <textarea class="input-xlarge" id="textarea" rows="3" type="text" name="Comments"></textarea>
+  </div>
+  </p>
+
+  <p>
+    <input class="btn" type="submit" value="Submit" />
+  </p>
+
+  <?php echo form_close(); ?>
+
+  <h4><?php echo anchor("site/view", "View Links"); ?></h4>
+</div>
+
+
+</body>
+</html>
 
       <hr>
 

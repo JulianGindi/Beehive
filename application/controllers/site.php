@@ -2,6 +2,17 @@
 
 class Site extends CI_Controller
 {
+
+	public function __construct()
+	{
+		session_start();
+		parent::__construct();
+
+		if ( !isset($_SESSION['username'])) {
+			redirect('admin');
+		}
+	}
+
 	function index()
 	{
 		$data = array();
