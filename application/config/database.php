@@ -48,10 +48,10 @@
 $active_record = TRUE;
  
 $db['production']['hostname'] = $_SERVER['DB1_HOST'];
-$db['production']['username'] = "DB1_USER";
-$db['production']['password'] = "DB1_PASS";
-$db['production']['database'] = "BeeHive";
-$db['production']['port']     = "3307";
+$db['production']['username'] = $_SERVER['DB1_USER'];
+$db['production']['password'] = $_SERVER['DB1_PASS'];
+$db['production']['database'] = $_SERVER['DB1_NAME'];
+$db['production']['port']     = $_SERVER['DB1_PORT'];
 $db['production']['dbdriver'] = "mysql";
 $db['production']['dbprefix'] = "";
 $db['production']['pconnect'] = TRUE;
