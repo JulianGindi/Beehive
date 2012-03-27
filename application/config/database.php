@@ -47,7 +47,7 @@
 
 $active_record = TRUE;
 
-if (isset($_SERVER['ENVIRONMENT']) && $_SERVER['ENVIRONMENT'] == 'production') {
+
  
 $db['production']['hostname'] = $_SERVER['DB1_HOST'];
 $db['production']['username'] = $_SERVER['DB1_USER'];
@@ -66,7 +66,7 @@ $db['production']['swap_pre'] = '';
 $db['production']['autoinit'] = TRUE;
 $db['production']['stricton'] = FALSE;
 
-}
+
  
 // production
 $db['development']['hostname'] = "localhost";
