@@ -23,7 +23,7 @@ class Site extends CI_Controller
 		}
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('options_view', $data);
+		$this->load->view('list_view', $data);
 	}
 
 	function create()

@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="views.css" rel="stylesheet">
+    <style> @import url('<?=base_url()?>/views.css'); </style>
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -46,7 +46,7 @@
           <a class="brand" href="#">BeeHive</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li><a href="<?=base_url()?>">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="#contact">Contact</a></li>
               <li id="logout"><?php echo anchor("admin/logout", "Logout"); ?></li>

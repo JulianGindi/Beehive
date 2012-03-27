@@ -46,7 +46,7 @@
           <a class="brand" href="#">BeeHive</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li><a href="<?=base_url()?>">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -58,7 +58,7 @@
     <div class="container">
 <body>
 
-  <p><h3> Login </h3></p>
+  <p><h3>Login</h3></p>
 
   <?php echo form_open('admin'); ?>
   <p>
