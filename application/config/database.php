@@ -48,6 +48,7 @@
 $active_record = TRUE;
 
 
+/*
 
 $db['production']['hostname'] = $_SERVER['DB1_HOST'];
 $db['production']['username'] = $_SERVER['DB1_USER'];
@@ -65,10 +66,10 @@ $db['production']['dbcollat'] = "utf8_general_ci";
 $db['production']['swap_pre'] = '';
 $db['production']['autoinit'] = TRUE;
 $db['production']['stricton'] = FALSE;
+*/
 
 
  
-/*
 // production
 $db['development']['hostname'] = "localhost";
 $db['development']['username'] = "root";
@@ -85,7 +86,6 @@ $db['development']['dbcollat'] = "utf8_general_ci";
 $db['development']['swap_pre'] = '';
 $db['development']['autoinit'] = TRUE;
 $db['development']['stricton'] = FALSE;
-*/
  
 // Switch active_group based on environment
 switch (ENVIRONMENT) {

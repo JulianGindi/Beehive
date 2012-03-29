@@ -24,3 +24,14 @@
 	list-style-type: none;
 }
 
+.alert-container {
+	
+}
+
+#first_name {
+	color: green;
+}
+
+.error {
+	visibility: hidden;
+}

@@ -31,6 +31,13 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    
+    <script>
+    $(document).ready(function(){
+      $("#commentForm").validate();
+    });
+    </script>
+    
   </head>
 
   <body>
@@ -59,13 +66,13 @@
 
   <p><h3>Register</h3></p>
 
-  <?php echo form_open('registration/create'); ?>
-  <p>
+  <?php echo form_open('registration'); ?>
+ <p id="name">
     <?php 
       echo form_label('First Name:', 'first_name');
       echo form_input('first_name', set_value('first_name'), 'id="first_name"');
     ?>
-  </p>
+ </p>
   <p>
     <?php 
       echo form_label('Last Name:', 'last_name');
@@ -77,6 +84,7 @@
       echo form_label('Email Address:', 'email_address');
       echo form_input('email_address', set_value('email_address'), 'id="email_address"');
     ?>
+    <span id="emailInfo">Valid E-mail please, you will need it to log in!</span>
   </p>
 
   <p>
@@ -84,6 +92,7 @@
       echo form_label('Password:', 'password');
       echo form_password('password', '', 'id="password"');
     ?>
+    <span id="passInfo">At least 6 characters</span>
   </p>
 
    <p>
@@ -91,8 +100,12 @@
   </p>
 
   <?php echo form_close(); ?>
+  
+  	<div class="row">
 
-<div class="errors"><?php echo validation_errors(); ?></div>
+	<div class="alert alert-error span4"><?php echo validation_errors(); ?></div>
+	
+	</div>
 
       <hr>
 
@@ -118,6 +131,9 @@
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/registration.js"></script>
+    <script src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+    <style type="text/css">
 
   </body>
 </html>
