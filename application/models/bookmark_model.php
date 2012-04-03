@@ -4,6 +4,8 @@ class Bookmark_model extends CI_Model {
 	
 	function get_bookmarks()
 	{
+
+	$this->db->where('user_name', $_SESSION['username']); 
 	$query = $this->db->get('Bookmarks');
 	return $query->result();
 	}

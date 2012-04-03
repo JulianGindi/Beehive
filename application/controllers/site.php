@@ -28,10 +28,12 @@ class Site extends CI_Controller
 
 	function create()
 	{
+		
 		$data = array (
 			'Name' => $this->input->post('Name'),
 			'URL' => $this->input->post('URL'),
-			'Comments' => $this->input->post('Comments')
+			'Comments' => $this->input->post('Comments'),
+			'user_name' => $_SESSION['username'] // Adds the user's ID into the array and links the posting to the unique user
 		);
 
 		$this->bookmark_model->add_bookmark($data);

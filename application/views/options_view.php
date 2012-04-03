@@ -61,6 +61,9 @@
       <body>
 
   <div class="input">
+
+  
+
   <h3>Add Favorite:</h3>
   <?php echo form_open('site/create'); ?>
 
