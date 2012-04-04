@@ -97,9 +97,9 @@
   
   	<div class="row">
 
-	<div class="alert alert-error span4"><?php echo validation_errors(); ?></div>
-	
-	</div>
+     <div class="alert alert-error span4"><?php echo validation_errors(); ?></div>
+     
+	 </div>
 
       <hr>
 

@@ -49,42 +49,42 @@ $active_record = TRUE;
 
 
 
-$db['production']['hostname'] = $_SERVER['DB1_HOST'];
-$db['production']['username'] = $_SERVER['DB1_USER'];
-$db['production']['password'] = $_SERVER['DB1_PASS'];
-$db['production']['database'] = $_SERVER['DB1_NAME'];
-$db['production']['port']     = $_SERVER['DB1_PORT'];
-$db['production']['dbdriver'] = "mysql";
-$db['production']['dbprefix'] = "";
-$db['production']['pconnect'] = TRUE;
-$db['production']['db_debug'] = TRUE;
-$db['production']['cache_on'] = FALSE;
-$db['production']['cachedir'] = "";
-$db['production']['char_set'] = "utf8";
-$db['production']['dbcollat'] = "utf8_general_ci";
-$db['production']['swap_pre'] = '';
-$db['production']['autoinit'] = TRUE;
-$db['production']['stricton'] = FALSE;
+// $db['production']['hostname'] = $_SERVER['DB1_HOST'];
+// $db['production']['username'] = $_SERVER['DB1_USER'];
+// $db['production']['password'] = $_SERVER['DB1_PASS'];
+// $db['production']['database'] = $_SERVER['DB1_NAME'];
+// $db['production']['port']     = $_SERVER['DB1_PORT'];
+// $db['production']['dbdriver'] = "mysql";
+// $db['production']['dbprefix'] = "";
+// $db['production']['pconnect'] = TRUE;
+// $db['production']['db_debug'] = TRUE;
+// $db['production']['cache_on'] = FALSE;
+// $db['production']['cachedir'] = "";
+// $db['production']['char_set'] = "utf8";
+// $db['production']['dbcollat'] = "utf8_general_ci";
+// $db['production']['swap_pre'] = '';
+// $db['production']['autoinit'] = TRUE;
+// $db['production']['stricton'] = FALSE;
 
 
 
  
-// production
-// $db['development']['hostname'] = "localhost";
-// $db['development']['username'] = "root";
-// $db['development']['password'] = "";
-// $db['development']['database'] = "BeeHive";
-// $db['development']['dbdriver'] = "mysql";
-// $db['development']['dbprefix'] = "";
-// $db['development']['pconnect'] = TRUE;
-// $db['development']['db_debug'] = TRUE;
-// $db['development']['cache_on'] = FALSE;
-// $db['development']['cachedir'] = "";
-// $db['development']['char_set'] = "utf8";
-// $db['development']['dbcollat'] = "utf8_general_ci";
-// $db['development']['swap_pre'] = '';
-// $db['development']['autoinit'] = TRUE;
-// $db['development']['stricton'] = FALSE;
+//production
+$db['development']['hostname'] = "localhost";
+$db['development']['username'] = "root";
+$db['development']['password'] = "";
+$db['development']['database'] = "BeeHive";
+$db['development']['dbdriver'] = "mysql";
+$db['development']['dbprefix'] = "";
+$db['development']['pconnect'] = TRUE;
+$db['development']['db_debug'] = TRUE;
+$db['development']['cache_on'] = FALSE;
+$db['development']['cachedir'] = "";
+$db['development']['char_set'] = "utf8";
+$db['development']['dbcollat'] = "utf8_general_ci";
+$db['development']['swap_pre'] = '';
+$db['development']['autoinit'] = TRUE;
+$db['development']['stricton'] = FALSE;
  
 // Switch active_group based on environment
 switch (ENVIRONMENT) {
