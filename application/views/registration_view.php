@@ -94,12 +94,20 @@
   </p>
 
   <?php echo form_close(); ?>
+
+<?php if(validation_errors()):?>
+
+<div class="row">
+<div class='alert alert-error span4'><?php echo validation_errors(); ?></div>
+</div>
+
+<?php endif;?>
   
-  	<div class="row">
+  	<!-- <div class="row">
 
      <div class="alert alert-error span4"><?php echo validation_errors(); ?></div>
      
-	 </div>
+	 </div> -->
 
       <hr>
 
