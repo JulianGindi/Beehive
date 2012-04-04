@@ -43,12 +43,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">BeeHive</a>
+          <a class="brand" href="<?=base_url()?>">BeeHive</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="<?=base_url()?>">Home</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="#contact">Contact</a></li>
               <li id="logout"><?php echo anchor("admin/logout", "Logout"); ?></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -65,10 +64,13 @@
 
 <ul class="favorites">
   <?php if(isset($bookmarks)) : foreach($bookmarks as $row) :?>
+  
+  <?php 
+  $link = $row->URL;
+  ?>
 
   <li>
-    <div><strong>Name:</strong> <?php echo $row->Name; ?> </div>
-    <div><strong>URL:</strong> <?php echo $row->URL; ?> </div>
+    <div><strong>Name: </strong><?php echo anchor('http://'.$link, $row->Name); ?></div>
     <div><strong>Comments:</strong> <?php echo $row->Comments; ?></div>
       <h4 class="btn-small"><?php echo anchor("site/delete/$row->id", "Delete"); ?></h4>
     <?php endforeach; ?>
@@ -80,8 +82,12 @@
   <h2>No Favorites were returned. </h2>
 
   <?php endif; ?>
-
+  
+  
+  <div class="new_favorite">
   <h4 class='btn'><?php echo anchor("site/view_add", "Enter a new Favorite"); ?></h4>
+  </div>
+	
 </div>  
 
       <hr>

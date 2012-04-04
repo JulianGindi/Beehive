@@ -35,3 +35,9 @@
 .error {
 	visibility: hidden;
 }
+
+.new_favorite {
+	
+	display: block;
+	margin-left: 20px;
+}
