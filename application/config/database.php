@@ -85,7 +85,7 @@ $active_record = TRUE;
 //$db['development']['swap_pre'] = '';
 //$db['development']['autoinit'] = TRUE;
 //$db['development']['stricton'] = FALSE;
-// 
+ 
 // Switch active_group based on environment
 switch (ENVIRONMENT) {
     case 'production':

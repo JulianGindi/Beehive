@@ -66,11 +66,11 @@
   <?php if(isset($bookmarks)) : foreach($bookmarks as $row) :?>
   
   <?php 
-  $link = $row->URL;
+    $fixed = preg_replace('#^[^:/.]*[:/]+#i', '', $row->URL);
   ?>
 
   <li>
-    <div><strong>Name: </strong><?php echo anchor('http://'.$link, $row->Name); ?></div>
+    <div><strong>Name: </strong><?php echo anchor('http://'.$fixed, $row->Name); ?></div>
     <div><strong>Comments:</strong> <?php echo $row->Comments; ?></div>
       <h4 class="btn-small"><?php echo anchor("site/delete/$row->id", "Delete"); ?></h4>
     <?php endforeach; ?>

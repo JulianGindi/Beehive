@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://beehive.pagodabox.com/';
+$config['base_url']	= 'www.beehive.pagodabox.com/';
 
 /*
 |--------------------------------------------------------------------------
