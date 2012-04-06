@@ -15,7 +15,7 @@
         padding-bottom: 40px;
       }
       #logout {
-      	margin-left: 600px;
+      	margin-left: 900px;
       }
 
     </style>
@@ -48,7 +48,6 @@
             <ul class="nav">
               <li><a href="<?=base_url()?>">Home</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

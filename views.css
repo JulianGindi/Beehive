@@ -24,6 +24,11 @@
 	list-style-type: none;
 }
 
+.favorites_list > h2 {
+	margin-left: 22px;
+	margin-bottom: 10px;
+}
+
 .alert-container {
 	
 }
@@ -45,3 +50,37 @@
 .urlhttp {
 	float: right;
 }
+
+.container {
+	width: 1170px;
+}
+
+
+/*List View Styling*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

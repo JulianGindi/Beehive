@@ -15,7 +15,7 @@
         padding-bottom: 40px;
       }
       #logout {
-      	margin-left: 600px;
+      	margin-left: 825px;
       }
 
     </style>
@@ -27,7 +27,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
@@ -48,7 +48,6 @@
             <ul class="nav">
               <li><a href="<?=base_url()?>">Home</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="#contact">Contact</a></li>
               <li id="logout"><?php echo anchor("admin/logout", "Logout"); ?></li>
             </ul>
           </div><!--/.nav-collapse -->

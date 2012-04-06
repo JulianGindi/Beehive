@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 
     <!-- Le styles -->
     <style> @import url('<?=base_url()?>/views.css'); </style>
@@ -15,10 +17,29 @@
         padding-bottom: 40px;
       }
       #logout {
-      	margin-left: 600px;
+      	margin-left: 900px;
+      }
+      
+      favorites_list > li {
+      	margin-top: 25px;
+      }
+      
+      .nav {
+    
       }
 
     </style>
+
+    <script type="text/javascript">
+        
+   	$(document).ready(
+   	
+   	function $init() {
+   	$('#makeDrag').sortable({tolerance: 'intersect'});
+   	$("#makeDrag").disableSelection();
+   	});
+    </script>
+  
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -27,7 +48,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
@@ -57,36 +78,40 @@
 
     <div class="container">
 
-      <body>
-<div class="favorites_list">  
+	<div class="favorites_list">  
 
-<h2>Websites You Love</h2>
+		<h2>Websites You Love</h2>
 
-<ul class="favorites">
-  <?php if(isset($bookmarks)) : foreach($bookmarks as $row) :?>
+		<ul class="favorites">
+  		<?php if(isset($bookmarks)) : foreach($bookmarks as $row) :?>
+  		<div id="makeDrag">
+  		
+  		<?php 
+    		$fixed = preg_replace('#^[^:/.]*[:/]+#i', '', $row->URL);
+  		 ?>
+
+  		<li>
+  		<div class="well">
+    		<div><?php echo anchor('http://'.$fixed, $row->Name); ?></div>
+    		<div><strong>Comments:</strong> <?php echo $row->Comments; ?></div>
+      		<h4 class="btn-small"><?php echo anchor("site/delete/$row->id", "Delete"); ?></h4>
+      		</div>
+      		</li>
+    		<?php endforeach; ?>
+    	
+    	</div>
+		</ul>
+
+ 		 <?php else : ?>
+
+ 		 <h2>No Favorites were returned. </h2>
+
+ 		 <?php endif; ?>
   
-  <?php 
-    $fixed = preg_replace('#^[^:/.]*[:/]+#i', '', $row->URL);
-  ?>
-
-  <li>
-    <div><strong>Name: </strong><?php echo anchor('http://'.$fixed, $row->Name); ?></div>
-    <div><strong>Comments:</strong> <?php echo $row->Comments; ?></div>
-      <h4 class="btn-small"><?php echo anchor("site/delete/$row->id", "Delete"); ?></h4>
-    <?php endforeach; ?>
-  </li>
-</ul>
-
-  <?php else : ?>
-
-  <h2>No Favorites were returned. </h2>
-
-  <?php endif; ?>
   
-  
-  <div class="new_favorite">
-  <h4 class='btn'><?php echo anchor("site/view_add", "Enter a new Favorite"); ?></h4>
-  </div>
+ 		 <div class="new_favorite">
+		  <h4 class='btn'><?php echo anchor("site/view_add", "Enter a new Favorite"); ?></h4>
+  	</div>
 	
 </div>  
 
@@ -101,7 +126,10 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
     <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery-ui-1.8.18.custom.min.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
