@@ -17,16 +17,16 @@
         padding-bottom: 40px;
       }
       #logout {
-      	margin-left: 900px;
+      	margin-left: 880px;
       }
       
       favorites_list > li {
       	margin-top: 25px;
       }
-      
+/*      
       .nav {
-    
-      }
+    	margin-left: 10px;
+      }*/
 
     </style>
 
@@ -68,7 +68,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="<?=base_url()?>">Home</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="http://bhive.tk">Dev Blog</a></li>
               <li id="logout"><?php echo anchor("admin/logout", "Logout"); ?></li>
             </ul>
           </div><!--/.nav-collapse -->

@@ -48,7 +48,7 @@
 $active_record = TRUE;
 
 
-
+//
  $db['production']['hostname'] = $_SERVER['DB1_HOST'];
  $db['production']['username'] = $_SERVER['DB1_USER'];
  $db['production']['password'] = $_SERVER['DB1_PASS'];

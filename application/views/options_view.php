@@ -47,7 +47,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="<?=base_url()?>">Home</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="http://bhive.tk">Dev Blog</a></li>
               <li id="logout"><?php echo anchor("admin/logout", "Logout"); ?></li>
             </ul>
           </div><!--/.nav-collapse -->
